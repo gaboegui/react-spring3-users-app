@@ -1,6 +1,6 @@
 # Users Application
 
-This project is a full-stack user management application, consisting of a React-based frontend and a Spring Boot backend.
+This project is a full-stack user management application, consisting of a React-based frontend and a Spring Boot 3 backend.
 
 ## Overview
 
