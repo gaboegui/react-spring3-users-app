@@ -34,7 +34,7 @@ public class UserController {
 
     // another way as req param
     @GetMapping("/")
-    public Page<UserDto> listUserByPage(@RequestParam (value ="page") Integer page) {
+    public Page<UserDto> listUserByPageParam(@RequestParam (value ="page") Integer page) {
         Pageable pageable = PageRequest.of(page,5 );
         return service.findAll(pageable);
     }
@@ -114,3 +114,4 @@ public class UserController {
 
 
 }
+
