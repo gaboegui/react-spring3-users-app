@@ -32,6 +32,14 @@ public class UserController {
         return service.findAll();
     }
 
+    // another way as req param
+    @GetMapping("/")
+    public Page<UserDto> listUserByPage(@RequestParam (value ="page") Integer page) {
+        Pageable pageable = PageRequest.of(page,5 );
+        return service.findAll(pageable);
+    }
+
+    
     @GetMapping("/page/{page}")
     public Page<UserDto> listUserByPage(@PathVariable Integer page) {
         Pageable pageable = PageRequest.of(page,5 );
@@ -103,5 +111,6 @@ public class UserController {
 
         return ResponseEntity.badRequest().body(errors);
     }
+
 
 }
